@@ -5,7 +5,7 @@ import java.util.List;
 import com.myp.domain.BoardVO;
 
 public class BoardServiceImpl implements BoardService {
-
+	
 	@Override
 	public void regist(BoardVO board) throws Exception {
 		// TODO Auto-generated method stub

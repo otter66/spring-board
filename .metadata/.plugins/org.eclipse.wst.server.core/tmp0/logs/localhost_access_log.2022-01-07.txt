@@ -35,3 +35,11 @@
 127.0.0.1 - - [07/Jan/2022:14:16:09 +0900] "GET / HTTP/1.1" 500 10571
 0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:16:10 +0900] "GET /WEB-INF/spring/root-context.xml HTTP/1.1" 404 721
 0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:16:22 +0900] "GET / HTTP/1.1" 500 10571
+127.0.0.1 - - [07/Jan/2022:14:39:37 +0900] "GET / HTTP/1.1" 500 10571
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:39:39 +0900] "GET /WEB-INF/classes/com/myp/service/BoardServiceImpl.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:39:50 +0900] "GET / HTTP/1.1" 500 10571
+127.0.0.1 - - [07/Jan/2022:14:40:42 +0900] "GET / HTTP/1.1" 500 10571
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:40:43 +0900] "GET /WEB-INF/classes/com/myp/persistence/BoardDAOImpl.java HTTP/1.1" 404 721
+127.0.0.1 - - [07/Jan/2022:14:41:20 +0900] "GET / HTTP/1.1" 500 10571
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:41:20 +0900] "GET /WEB-INF/classes/com/myp/persistence/BoardDAOImpl.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:41:31 +0900] "GET / HTTP/1.1" 500 10571
