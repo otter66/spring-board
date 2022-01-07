@@ -2,11 +2,8 @@ package com.myp.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.myp.domain.BoardVO;
 
-@Repository
 public class BoardServiceImpl implements BoardService {
 	
 	@Override

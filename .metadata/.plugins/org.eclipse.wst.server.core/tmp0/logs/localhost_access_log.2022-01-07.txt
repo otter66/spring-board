@@ -43,3 +43,9 @@
 127.0.0.1 - - [07/Jan/2022:14:41:20 +0900] "GET / HTTP/1.1" 500 10571
 0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:41:20 +0900] "GET /WEB-INF/classes/com/myp/persistence/BoardDAOImpl.java HTTP/1.1" 404 721
 0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:41:31 +0900] "GET / HTTP/1.1" 500 10571
+127.0.0.1 - - [07/Jan/2022:14:44:59 +0900] "GET / HTTP/1.1" 500 10571
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:44:59 +0900] "GET /WEB-INF/classes/com/myp/persistence/BoardDAOImpl.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:45:13 +0900] "GET / HTTP/1.1" 500 10571
+127.0.0.1 - - [07/Jan/2022:14:49:02 +0900] "GET / HTTP/1.1" 500 10571
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:49:04 +0900] "GET /WEB-INF/classes/com/myp/persistence/BoardDAOImpl.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [07/Jan/2022:14:49:19 +0900] "GET / HTTP/1.1" 500 10571
