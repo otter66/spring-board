@@ -9,7 +9,6 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void regist(BoardVO board) throws Exception {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -21,13 +20,11 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void modify(BoardVO board) throws Exception {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void remove(Integer bno) throws Exception {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override

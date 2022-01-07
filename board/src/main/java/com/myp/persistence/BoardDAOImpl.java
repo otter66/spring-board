@@ -9,7 +9,6 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public void create(BoardVO vo) throws Exception {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -21,13 +20,11 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public void update(BoardVO vo) throws Exception {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void delete(Integer bno) throws Exception {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
