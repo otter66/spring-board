@@ -1,7 +1,7 @@
 ﻿# spring-board   
+- 4주 동안 
 - eclipse와 spring을 이용해 게시판 만들기   
 - CRUD 이해하기   
-- 참고 블로그 ([링크](https://blog.daum.net/chan-0124/62?category=263225))
 
 <br><br>
 
@@ -19,3 +19,7 @@ DB연동 준비
 
 ## 3주차   
 글쓰기 구현하기 (html 작성, controller에 관련 메소드 추가)   
+
+<br><br><br>
+---
+참고 블로그 ([링크](https://blog.daum.net/chan-0124/62?category=263225))
