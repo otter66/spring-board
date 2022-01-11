@@ -23,6 +23,6 @@ DB연동 준비
 <br><br><br>
 ---
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/>
-
+<img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/>
 
 참고 블로그 ([링크](https://blog.daum.net/chan-0124/62?category=263225))
