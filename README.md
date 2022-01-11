@@ -6,7 +6,7 @@
 <br><br>
 
 ## 1주차   
-Create spring project in eclipse and upload to github   
+이클립스에서 스프링 프로젝트 만들고 깃헙에 올리기   
 
 <br>
 
