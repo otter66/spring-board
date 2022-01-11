@@ -17,8 +17,8 @@
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/chan0124?characterEncoding=utf8&amp;serverTimezone=UTC"></property>
-		<property name="username" value="root"></property>
+			value="jdbc:mysql://localhost:3306/spring_board?characterEncoding=utf8&amp;useSSL=false"></property>
+		<property name="username" value="otter"></property>
 		<property name="password" value="1q2w3e"></property>
 	</bean>
 	
