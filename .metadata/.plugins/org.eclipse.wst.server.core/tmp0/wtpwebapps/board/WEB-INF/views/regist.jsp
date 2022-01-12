@@ -6,7 +6,9 @@
 	<meta charset="EUC-KR">
 	<title>글쓰기</title>
 </head>
-<form method = "post"> 
+
+<!-- action = "regist"  -->
+<form action = "regist" method = "post"> 
 <body>
 
 	<p><label>제목</label><input type="text" name ="title"></p>	

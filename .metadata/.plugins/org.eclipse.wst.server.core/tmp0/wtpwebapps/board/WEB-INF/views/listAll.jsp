@@ -7,13 +7,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="EUC-KR">
 	<title>게시판 목록</title>
 </head>
 <form action = "regist" method = "get">
 <body>
 <table border="1" width="880">
-
     <tr>
         <td width="77">
             <p align="center">글번호</p>
