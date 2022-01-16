@@ -1,5 +1,0 @@
-package com.myp.persistence;
-
-public interface BoardDAO {
-
-}
