@@ -24,6 +24,7 @@ DB연동 준비
 
 ## 4주차
 환경 변화(MySQL -> Oracle)
+> Oracle database를 설치하던 중 설치가 더이상 진행되지 않아 재설치하는 과정에서 문제 발생 [해결 참고 링크](https://m.blog.naver.com/lsp132/221907625699)
 
    
 <br><br><br>
