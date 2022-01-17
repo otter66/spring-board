@@ -10,19 +10,19 @@
 
 <br>
 
-### 2주차 
+## 2주차 
 DB연동 준비   
 > 404에러 발생.   
 > 도움을 받아 workspace에 셋팅된 path와 Java Build Path가 일치하지 않아 발생하였다는 것을 알고 해결.   
 
 <br>
 
-### 3주차   
+## 3주차   
 글쓰기 구현하기 (html 작성, controller에 관련 메소드 추가)   
 
 <br>
 
-### 4주차
+## 4주차
 환경 변화(MySQL -> Oracle)
 
    
