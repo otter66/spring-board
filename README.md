@@ -24,7 +24,7 @@ DB연동 준비
 
 ## 4주차
 환경 변화(MySQL -> Oracle)
-> Oracle database를 설치하던 중간에 멈추어 재설치하는 과정에서 문제 발생 [해결 참고 링크](https://m.blog.naver.com/lsp132/221907625699)
+> Oracle database를 설치하던 중간에 멈추어 재설치하는 과정에서 문제 발생
 
    
 <br><br><br>   
