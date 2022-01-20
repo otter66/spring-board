@@ -4,7 +4,8 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -12,49 +13,49 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.myp.domain.BoardVO;
 import com.myp.service.BoardService;
 
-@Controller // ÄÁÆ®·Ñ·¯ÀÓÀ» ¸í½Ã
-@RequestMapping(value = "/") // ÁÖ¼Ò ÆĞÅÏ
+@Controller // ì»¨íŠ¸ë¡¤ëŸ¬ì„ì„ ëª…ì‹œ
+@RequestMapping(value = "/") // ì£¼ì†Œ íŒ¨í„´
 public class BoardController {
 
-	@Inject   // ÁÖÀÔ(½ÉºÎ¸§²Û) ¸í½Ã
-	private BoardService service; // Service È£ÃâÀ» À§ÇÑ °´Ã¼»ı¼º
+	@Inject   // ì£¼ì…(ì‹¬ë¶€ë¦„ê¾¼) ëª…ì‹œ
+	private BoardService service; // Service í˜¸ì¶œì„ ìœ„í•œ ê°ì²´ìƒì„±
 
-	@RequestMapping(value= "/listAll", method = RequestMethod.GET) // ÁÖ¼Ò È£Ãâ ¸í½Ã . È£ÃâÇÏ·Á´Â ÁÖ¼Ò ¿Í REST ¹æ½Ä¼³Á¤ (GET)
-	public void listAll(Model model)throws Exception { // ¸Ş¼Òµå ÀÎÀÚ°ªÀº model ÀÎÅÍÆäÀÌ½º(jspÀü´Ş ½ÉºÎ¸§²Û)
-		model.addAttribute("list",service.listAll()); // jsp¿¡ ½ÉºÎ¸§ÇÒ ³»¿ª(¼­ºñ½º È£Ãâ)
+	@GetMapping(value= "/listAll") // ì£¼ì†Œ í˜¸ì¶œ ëª…ì‹œ . í˜¸ì¶œí•˜ë ¤ëŠ” ì£¼ì†Œ ì™€ REST ë°©ì‹ì„¤ì • (GET)
+	public void listAll(Model model)throws Exception { // ë©”ì†Œë“œ ì¸ìê°’ì€ model ì¸í„°í˜ì´ìŠ¤(jspì „ë‹¬ ì‹¬ë¶€ë¦„ê¾¼)
+		model.addAttribute("list",service.listAll()); // jspì— ì‹¬ë¶€ë¦„í•  ë‚´ì—­(ì„œë¹„ìŠ¤ í˜¸ì¶œ)
 	}
 	
-	@RequestMapping(value = "/regist", method = RequestMethod.GET) // GET ¹æ½ÄÀ¸·Î ÆäÀÌÁö È£Ãâ
+	@GetMapping(value = "/regist") // GET ë°©ì‹ìœ¼ë¡œ í˜ì´ì§€ í˜¸ì¶œ
 	  public void registerGET(BoardVO board, Model model) throws Exception {
 	}
 	
-	@RequestMapping(value = "/regist", method = RequestMethod.POST) // POST¹æ½ÄÀ¸·Î ³»¿ë Àü¼Û
-	public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception { // ÀÎÀÚ°ªÀ¸·Î REDIRECT »ç¿ë 
-		service.regist(board); // ±ÛÀÛ¼º ¼­ºñ½º È£Ãâ
-	    return "redirect:/listAll"; // ÀÛ¼ºÀÌ ¿Ï·áµÈ ÈÄ, ¸ñ·ÏÆäÀÌÁö·Î ¸®ÅÏ
+	@PostMapping(value = "/regist") // POSTë°©ì‹ìœ¼ë¡œ ë‚´ìš© ì „ì†¡
+	public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception { // ì¸ìê°’ìœ¼ë¡œ REDIRECT ì‚¬ìš© 
+		service.regist(board); // ê¸€ì‘ì„± ì„œë¹„ìŠ¤ í˜¸ì¶œ
+	    return "redirect:/listAll"; // ì‘ì„±ì´ ì™„ë£Œëœ í›„, ëª©ë¡í˜ì´ì§€ë¡œ ë¦¬í„´
 	}
 	
-	@RequestMapping(value = "/read", method = RequestMethod.GET) // GET ¹æ½ÄÀ¸·Î ÆäÀÌÁö È£Ãâ
+	@GetMapping(value = "/read") // GET ë°©ì‹ìœ¼ë¡œ í˜ì´ì§€ í˜¸ì¶œ
 	public void read(@RequestParam("bno")int bno, Model model) throws Exception{
-		// ÀÎÀÚ°ªÀº ÆÄ¶ó¹ÌÅÍ °ªÀ¸·Î ±âº»Å°ÀÎ ±Û¹øÈ£¸¦ ±âÁØÀ¸·Î ModelÀ» »ç¿ëÇÏ¿© ºÒ·¯¿È
-		model.addAttribute(service.read(bno)); // read ¼­ºñ½º È£Ãâ
+		// ì¸ìê°’ì€ íŒŒë¼ë¯¸í„° ê°’ìœ¼ë¡œ ê¸°ë³¸í‚¤ì¸ ê¸€ë²ˆí˜¸ë¥¼ ê¸°ì¤€ìœ¼ë¡œ Modelì„ ì‚¬ìš©í•˜ì—¬ ë¶ˆëŸ¬ì˜´
+		model.addAttribute(service.read(bno)); // read ì„œë¹„ìŠ¤ í˜¸ì¶œ
 	}
 	
-	@RequestMapping(value = "/modify", method = RequestMethod.GET) // GET ¹æ½ÄÀ¸·Î ÆäÀÌÁö È£Ãâ
+	@GetMapping(value = "/modify") // GET ë°©ì‹ìœ¼ë¡œ í˜ì´ì§€ í˜¸ì¶œ
 	public void modifyGET(int bno, Model model) throws Exception {
-		model.addAttribute(service.read(bno)); // ¼öÁ¤À» À§ÇÑ ±ÛÀĞ±â ¼­ºñ½º È£Ãâ
+		model.addAttribute(service.read(bno)); // ìˆ˜ì •ì„ ìœ„í•œ ê¸€ì½ê¸° ì„œë¹„ìŠ¤ í˜¸ì¶œ
 	}
 	
-	@RequestMapping(value = "/modify", method = RequestMethod.POST)// POST¹æ½ÄÀ¸·Î µ¥ÀÌÅÍ Àü¼Û
+	@PostMapping(value = "/modify")// POSTë°©ì‹ìœ¼ë¡œ ë°ì´í„° ì „ì†¡
 	public String modifyPOST(BoardVO board, RedirectAttributes rttr) throws Exception {
-	    service.modify(board); // ±Û¼öÁ¤ ¼­ºñ½º È£Ãâ
-	    return "redirect:/listAll"; // ¼öÁ¤ÀÌ ¿Ï·áµÈ ÈÄ, ¸ñ·ÏÆäÀÌÁö·Î ¸®ÅÏ
+	    service.modify(board); // ê¸€ìˆ˜ì • ì„œë¹„ìŠ¤ í˜¸ì¶œ
+	    return "redirect:/listAll"; // ìˆ˜ì •ì´ ì™„ë£Œëœ í›„, ëª©ë¡í˜ì´ì§€ë¡œ ë¦¬í„´
 	}
 	
-	@RequestMapping(value = "/remove", method = RequestMethod.POST)// POST¹æ½ÄÀ¸·Î µ¥ÀÌÅÍ Àü¼Û
+	@PostMapping(value = "/remove")// POSTë°©ì‹ìœ¼ë¡œ ë°ì´í„° ì „ì†¡
 	public String removePOST(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception{
-		service.remove(bno); // ±Û»èÁ¦ ¼­ºñ½º È£Ãâ
-		return "redirect:/listAll"; // »èÁ¦°¡ ¿Ï·áµÈ ÈÄ, ¸ñ·ÏÆäÀÌÁö·Î ¸®ÅÏ
+		service.remove(bno); // ê¸€ì‚­ì œ ì„œë¹„ìŠ¤ í˜¸ì¶œ
+		return "redirect:/listAll"; // ì‚­ì œê°€ ì™„ë£Œëœ í›„, ëª©ë¡í˜ì´ì§€ë¡œ ë¦¬í„´
 	}
 	
 }
