@@ -20,7 +20,6 @@
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
 			<exclusions>
-				<!-- Exclude Commons Logging in favor of SLF4j -->
 				<exclusion>
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging</artifactId>
@@ -130,11 +129,22 @@
 		</dependency>
 		
 		<!-- MySQL -->
+		<!-- 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.46</version>
 		</dependency>
+		-->
+		
+		<!-- MS-SQL -->
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>6.4.0.jre8</version>
+		</dependency>
+
+		
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
