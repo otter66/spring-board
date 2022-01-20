@@ -1,0 +1,5 @@
+package com.myp.controller;
+
+public class HomeController {
+
+}

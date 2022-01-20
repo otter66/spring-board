@@ -4723,10 +4723,19 @@
   <!-- here, so be sure to include any of the default values that you wish  -->
   <!-- to use within your application.                                       -->
 
-    <welcome-file-list>
+
+<!--     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list> -->
+    <welcome-file-list>
+        <welcome-file>listAll.html</welcome-file>
+        <welcome-file>listAll.htm</welcome-file>
+        <welcome-file>listAll.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+    	<welcome-file>default.htm</welcome-file>
+    	<welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

@@ -1,0 +1,61 @@
+package com.myp.controller;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.myp.domain.BoardVO;
+import com.myp.service.BoardService;
+
+@Controller // 而⑦듃濡ㅻ윭�엫�쓣 紐낆떆
+//@RequestMapping(value = "/") // 二쇱냼 �뙣�꽩
+public class BoardController {
+
+	@Inject   // 二쇱엯(�떖遺�由꾧씔) 紐낆떆
+	private BoardService service; // Service �샇異쒖쓣 �쐞�븳 媛앹껜�깮�꽦
+
+	@GetMapping(value= "/listAll") // 二쇱냼 �샇異� 紐낆떆 . �샇異쒗븯�젮�뒗 二쇱냼 �� REST 諛⑹떇�꽕�젙 (GET)
+	public void listAll(Model model)throws Exception { // 硫붿냼�뱶 �씤�옄媛믪� model �씤�꽣�럹�씠�뒪(jsp�쟾�떖 �떖遺�由꾧씔)
+		model.addAttribute("list",service.listAll()); // jsp�뿉 �떖遺�由꾪븷 �궡�뿭(�꽌鍮꾩뒪 �샇異�)
+	}
+	
+	@GetMapping(value = "/regist") // GET 諛⑹떇�쑝濡� �럹�씠吏� �샇異�
+	  public void registerGET(BoardVO board, Model model) throws Exception {
+	}
+	
+	@PostMapping(value = "/regist") // POST諛⑹떇�쑝濡� �궡�슜 �쟾�넚
+	public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception { // �씤�옄媛믪쑝濡� REDIRECT �궗�슜 
+		service.regist(board); // 湲��옉�꽦 �꽌鍮꾩뒪 �샇異�
+	    return "redirect:/listAll"; // �옉�꽦�씠 �셿猷뚮맂 �썑, 紐⑸줉�럹�씠吏�濡� 由ы꽩
+	}
+	
+	@GetMapping(value = "/read") // GET 諛⑹떇�쑝濡� �럹�씠吏� �샇異�
+	public void read(@RequestParam("bno")int bno, Model model) throws Exception{
+		// �씤�옄媛믪� �뙆�씪誘명꽣 媛믪쑝濡� 湲곕낯�궎�씤 湲�踰덊샇瑜� 湲곗��쑝濡� Model�쓣 �궗�슜�븯�뿬 遺덈윭�샂
+		model.addAttribute(service.read(bno)); // read �꽌鍮꾩뒪 �샇異�
+	}
+	
+	@GetMapping(value = "/modify") // GET 諛⑹떇�쑝濡� �럹�씠吏� �샇異�
+	public void modifyGET(int bno, Model model) throws Exception {
+		model.addAttribute(service.read(bno)); // �닔�젙�쓣 �쐞�븳 湲��씫湲� �꽌鍮꾩뒪 �샇異�
+	}
+	
+	@PostMapping(value = "/modify")// POST諛⑹떇�쑝濡� �뜲�씠�꽣 �쟾�넚
+	public String modifyPOST(BoardVO board, RedirectAttributes rttr) throws Exception {
+	    service.modify(board); // 湲��닔�젙 �꽌鍮꾩뒪 �샇異�
+	    return "redirect:/listAll"; // �닔�젙�씠 �셿猷뚮맂 �썑, 紐⑸줉�럹�씠吏�濡� 由ы꽩
+	}
+	
+	@PostMapping(value = "/remove")// POST諛⑹떇�쑝濡� �뜲�씠�꽣 �쟾�넚
+	public String removePOST(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception{
+		service.remove(bno); // 湲��궘�젣 �꽌鍮꾩뒪 �샇異�
+		return "redirect:/listAll"; // �궘�젣媛� �셿猷뚮맂 �썑, 紐⑸줉�럹�씠吏�濡� 由ы꽩
+	}
+	
+}
