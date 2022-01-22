@@ -29,7 +29,8 @@ DB연동 준비
 <br>
 
 ## after
-- 시작페이지를 게시판으로 변경 (home.jsp -> listAll.jsp)
+- 요청 처리 방법 변경 ([링크] (https://mungto.tistory.com/436))
+- 시작페이지를 게시판으로 변경 (home.jsp -> listAll.jsp) ([링크] (https://admm.tistory.com/82))
 
    
 <br><br><br>   
