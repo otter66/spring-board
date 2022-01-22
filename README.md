@@ -26,6 +26,11 @@ DB연동 준비
 환경 변화(MySQL -> Oracle)
 > Oracle database를 설치하던 중간에 멈추어 재설치하는 과정에서 문제 발생
 
+<br>
+
+## after
+- 시작페이지를 게시판으로 변경 (home.jsp -> listAll.jsp)
+
    
 <br><br><br>   
 
