@@ -1,4 +1,4 @@
-﻿# spring-board   <img align='right' src="https://download.logo.wine/logo/Spring_Framework/Spring_Framework-Logo.wine.png" width="300" height="300">
+﻿# spring-board   <img align='right' src="https://download.logo.wine/logo/Spring_Framework/Spring_Framework-Logo.wine.png" width="300" height="200">
 - 4주 동안 
 - eclipse와 spring을 이용해 게시판 만들기   
 - CRUD 이해하기   
