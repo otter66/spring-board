@@ -1,4 +1,4 @@
-﻿# spring-board   
+﻿# spring-board   <img align='right' src="https://t1.daumcdn.net/cfile/tistory/9941A1385B99240D2E">
 - 4주 동안 
 - eclipse와 spring을 이용해 게시판 만들기   
 - CRUD 이해하기   
@@ -28,7 +28,7 @@ DB연동 준비
 
 <br>
 
-## after
+## After
 - 요청 처리 방법 변경 ([링크](https://mungto.tistory.com/436))
 - 시작페이지를 게시판으로 변경 (home.jsp -> listAll.jsp) ([링크](https://admm.tistory.com/82))
 
