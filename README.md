@@ -23,7 +23,7 @@ DB연동 준비
 <br>
 
 ## 4주차
-환경 변화(MySQL -> Oracle)
+환경 변화(MySQL → Oracle)
 > Oracle database를 설치하던 중간에 멈추어 재설치하는 과정에서 문제 발생
 
 <br>
@@ -31,6 +31,7 @@ DB연동 준비
 ## After
 - 요청 처리 방법 변경 ([링크](https://mungto.tistory.com/436))
 - 시작페이지를 게시판으로 변경 (home.jsp -> listAll.jsp) ([링크](https://admm.tistory.com/82))
+- 환경 변화(MySQL → MS-SQL) ([링크1](https://grand-unified-engine.tistory.com/31)), ([링크2](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nc926&logNo=220928265157))
 
    
 <br><br><br>   
@@ -38,4 +39,4 @@ DB연동 준비
 ---
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/> <img src="https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=Apache Tomcat&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>   
 
-참고 블로그 ([링크](https://blog.daum.net/chan-0124/62?category=263225))
+참고 블로그 (mySQL + Sprig + Tomcat + Eclipse 게시판 만들기) ([링크](https://blog.daum.net/chan-0124/62?category=263225))
