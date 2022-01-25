@@ -31,7 +31,7 @@ DB연동 준비
 ## After
 - 요청 처리 방법 변경 ([링크](https://mungto.tistory.com/436))
 - 시작페이지를 게시판으로 변경 (home.jsp -> listAll.jsp) ([링크](https://admm.tistory.com/82))
-- 환경 변화(MySQL → MS-SQL) ([링크1](https://grand-unified-engine.tistory.com/31)), ([링크2](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nc926&logNo=220928265157))
+- ~~환경 변화(MySQL → MS-SQL) ([링크1](https://grand-unified-engine.tistory.com/31)), ([링크2](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nc926&logNo=220928265157))~~
 
    
 <br><br><br>   
